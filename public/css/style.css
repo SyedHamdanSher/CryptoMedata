@@ -1,0 +1,276 @@
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.pd-0 {
+    padding: 0 !important;
+}
+
+.pdT-0 {
+    padding-top: 0 !important;
+}
+
+.pd-10 {
+    padding: 10px;
+}
+
+.pd-20 {
+    padding: 20px;
+}
+
+.pdT-5 {
+    padding-top: 5px;
+}
+
+.pdT-10 {
+    padding-top: 10px;
+}
+
+.pdT-20 {
+    padding-top: 20px;
+}
+
+.pdb-10 {
+    padding-bottom: 10px;
+}
+.pdB-0{
+  padding-bottom: 0px;
+}
+.pdB-5 {
+    padding-bottom: 5px;
+}
+
+.pdB-10 {
+    padding-bottom: 10px;
+}
+
+.pdL-5 {
+    padding-left: 5px;
+}
+
+.pdL-10 {
+    padding-left: 10px;
+}
+
+.pdL-15 {
+    padding-left: 15px;
+}
+
+.pdL-20 {
+    padding-left: 20px;
+}
+
+.pdL-0 {
+    padding-left: 0;
+}
+
+.pdR-0 {
+    padding-right: 0;
+}
+
+.pdR-15 {
+    padding-right: 15px;
+}
+
+.mr-0 {
+    margin: 0 !important;
+}
+
+.mrB-0 {
+    margin-bottom: 0px;
+}
+
+.mrB-15 {
+    margin-bottom: 15px;
+}
+
+.mrB-20 {
+  margin-bottom: 20px;
+}
+.mrL-20 {
+    margin-left: 20px !important;
+}
+
+.mrL-30 {
+    margin-left: 30px !important;
+}
+
+.mrB-10 {
+    margin-bottom: 10px;
+}
+
+.mrR-5 {
+    margin-right: 5px;
+}
+
+.mrR-10 {
+    margin-right: 10px;
+}
+
+.mrT-0 {
+    margin-top: 0px;
+}
+
+.mrT-5 {
+    margin-top: 5px;
+}
+
+.mrT-10 {
+    margin-top: 10px;
+}
+
+.mrT-15 {
+    margin-top: 15px;
+}
+
+.mrT-20 {
+    margin-top: 20px;
+}
+
+.mrL-10 {
+    margin-left: 10px;
+}
+
+.mrL-5 {
+    margin-left: 5px;
+}
+
+.mrL-15 {
+    margin-left: 15px;
+}
+
+.mrL-20 {
+    margin-left: 20px;
+}
+
+.mrT-20 {
+    margin-top: 20px;
+}
+
+.mrT-30 {
+    margin-top: 30px;
+}
+.fs-16{
+  font-size: 16px;
+}
+.red {
+  color : red;
+  font-weight: bold;
+  font-size: 16px
+}
+.green {
+  color : green;
+  font-weight: bold;
+  font-size: 18px
+}
+.border-bottom {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.decision-div{
+  border: 5px solid #eeeeee;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.justify {
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px !important;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.border-none{
+  box-shadow: none !important;
+  border: none !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+.header img {
+  float: left;
+  width: 200px;
+  height: 75px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+.ui-widget.ui-widget-content {
+    border: 1px solid #c5c5c5;
+}
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    color: #333333;
+}
+.ui-widget {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+}
+.ui-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    outline: 0;
+}
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ui-front {
+    z-index: 100;
+}
+.ui-menu .ui-menu-item {
+    margin: 0;
+    cursor: pointer;
+    list-style-image:
+}
+.ui-menu .ui-menu-item-wrapper {
+    position: relative;
+    padding: 3px 1em 3px .4em;
+}

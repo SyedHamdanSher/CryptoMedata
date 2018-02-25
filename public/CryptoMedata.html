@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>CryptoMedata</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/bootswatch.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+</head>
+
+<body class="pd-0">
+    <div id="wrap">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                    <img src="images/cryto.png" class="img-responsive navbar-brand"  style="width: 200px;height: 90px;"/>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="active" href="#">Zeshan Sayed</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="/qrcode">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" id="contact">
+            <div class="jumbotron clearfix">
+                <h4 style="color:#C00">CryptoMedata Portal</h4>
+                <div class="col-xs-12 who-div pd-0" style="">
+                  <div class="row" style="">
+          			    <div class="col-xs-12">
+                      <form>
+                        <div class="form-group">
+                          <label for="diseaseInput">Name a Disease, and we will recommend you the most preferred Doctor.</label>
+                          <input type="text" class="form-control" id="diseaseInput" placeholder="e.g. Diabetes">
+                          <div class="col-xs-12 mrT-10 pd-0">
+                            <a href="#" id="searchDr" class="btn btn-primary pull-right">Search Dr.</a>
+                          </div>
+                        </div>
+                      </form>
+            				</div>
+                    <div class="col-xs-12 mrT-10">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit duis tristique. Arcu bibendum at varius vel pharetra vel. Augue neque gravida in fermentum et sollicitudin ac orci.</p>
+                    </div>
+                  </div>
+                <!-- <div class="col-xs-12 pd-0">
+                  <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#viewRequest">View Request</a>
+                </div> -->
+            </div>
+            <div class="col-xs-12 dr-div" style="display:none;">
+              <p><b>Recommended Doctor's</b></p>
+              <table class="table table-striped table-hover request-table">
+              <thead>
+                <tr>
+                  <th>Dr Id</th>
+                  <th>Dr. NAme</th>
+                  <th>Address</th>
+                  <th>Information</th>
+                  <th>Followers</th>
+                  <th>Website</th>
+                  <th>Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+              </tbody>
+
+            </table>
+            <div class="col-xs-12">
+              <a href="#" class="btn btn-primary pull-right analyse-data">Analyse Data from Azure</a>
+            </div>
+            </div>
+            <div class="col-xs-12 pd-0 view-azure-data" style="display:none;">
+                <p><b>Analysation Tool </b></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit duis tristique. Arcu bibendum at varius vel pharetra vel. Augue neque gravida in fermentum et sollicitudin ac orci.</p>
+              <iframe width="100%" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiOWU2ZjQ4YTYtYjNjMi00YzIzLWExY2YtN2Q2NmIwMGNhNDcxIiwidCI6IjUxM2E2ZTdiLTRkNjctNDliYy04OWViLTIyNzIzMmRlMWExZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+
+
+        </div>
+        <!-- Modal Start-->
+
+        <!-- Modal Ends-->
+
+
+    </div>
+
+    <!--  Footer Starts -->
+    <div id="footer">
+        <div class="container text-center">
+            <p class="text-muted credit mrT-20"><span class="glyphicon glyphicon-copyright-mark"></span> Copyright, 2018 - CryptoMedata <a target="_blank" href="">(www.Cry.com)</a></p>
+        </div>
+    </div>
+    <!-- Footer Ends -->
+
+    <!-- Modal starrtes-->
+    <div class="modal" id="viewRequest">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">View Request</h4>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped table-hover request-table" style="display:none;">
+            <thead>
+              <tr>
+                <th>Dr Id</th>
+                <th>Dr. NAme</th>
+                <th>Address</th>
+                <th>Information</th>
+                <th>Followers</th>
+                <th>Website</th>
+                <th>Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+          </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Ends -->
+
+    <script type="text/javascript" src="js/jquerysession.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          //Test for ML
+          // 
+          // $.ajax({
+          //
+          //   type: 'POST',
+          //   url: 'http://172.16.158.226:8080/informPatient',
+          //
+          //   // dataType: 'text',
+          //    data: 'test',
+          //   contentType: "application/json; charset=UTF-8",
+          //   //contentType: 'application/json',
+          //   dataType: 'json',
+          //
+          //     success: function(data) {
+          //         console.log('success');
+          //         console.log("Request Submitted"); //async:false
+          //         //$("#messageSent").modal('show');
+          //         console.log(data);
+          //         //loadRequest(data);
+          //     },
+          //     error: function(err) {
+          //       console.log(err);
+          //     }
+          // });
+          //
+          // //Test for ML  Ends
+          //Autocomplete
+
+              //$( function() {
+                var availableTags = [
+                  "Cancer, Dabetes, Science and medical related content ",
+                  "Neural Specialist, Cancer ",
+                  "Cardiac Surgeon",
+                  "Cardiac Surgeon , Neural Specialist",
+                  "Cancer , Skin Care",
+                  "Diabetes",
+                  "Neural Specialist , Brain  Tumor",
+                  "Family, Diabetes",
+                  "Digital Healt, Diabetes",
+                  "Neural Specialist , Brain  Tumor",
+                  "Neural Specialist , Breast Cancer",
+                  "Population Health, Global Health, Health Equity, Advocacy, Social Justice, Social Accountability",
+                  "Family Physician, Diabetes",
+                  "Population Health Global Health Health Equity Advocacy Social Justice Social Accountability",
+                  "Population Health, Brain tumor",
+                  "Chief Medical Officer, Diabetes",
+                  "Teacher; Healer; Artist, Brain tumor"
+                ];
+                $( "#diseaseInput" ).autocomplete({
+                  source: availableTags
+                });
+              //});
+          //console.log(data);
+          //function to get data for Patient0
+          $("#searchDr").on('click', function () {
+            getDrs($("#diseaseInput").val());
+          });
+          function getDrs (data) {
+
+              var data1 = {'input': data};
+              $.ajax({
+
+                type: 'POST',
+                url: 'http://172.16.158.226:8080/recommendedDoctorDetails',
+
+                // dataType: 'text',
+                 data: data1,
+                contentType: "application/json; charset=UTF-8",
+                //contentType: 'application/json',
+                dataType: 'json',
+
+                  data: JSON.stringify(data1),
+
+                  //dataType:       'json',
+
+                  /* Very important */
+                  //contentType:    'application/json',
+                  //data: JSON.stringify(info),
+                  success: function(data) {
+                      console.log('success');
+                      console.log("Request Submitted"); //async:false
+                      //$("#messageSent").modal('show');
+                      console.log(data);
+                      loadRequest(data);
+                  }
+              });
+          }
+          //Load Dr getDrDetails
+          function loadRequest(data) {
+            for (var i=0;i <data.length; i++) {
+              var test = '<tr class="">'+
+                '<td>'+(i+1)+'</td>'+
+                '<td>'+data[i].Name+'</td>'+
+                '<td>'+data[i].aAddress+'</td>'+
+                '<td>'+data[i].description+'</td>'+
+                '<td>'+data[i].followers+'</td>'+
+                '<td>'+data[i].website+'</td>'+
+                '<td><a href="#" class="btn btn-success action accept" action="accept" dr-id="'+data[i].DID+'">Contact</a> </td>'+
+              '</tr>';
+              $(".request-table tbody").append(test);
+            }
+            $(".dr-div").slideDown('slow', function () {
+              setTimeout( function () {
+                    $('html, body').animate({
+                        scrollTop: $(".dr-div").offset().top
+                    }, 1000);
+
+              });
+            })
+          }
+
+          $(".analyse-data").on('click', function() {
+            $(".view-azure-data").slideDown('slow', function () {
+              setTimeout( function () {
+                    $('html, body').animate({
+                        scrollTop: $(".view-azure-data").offset().top
+                    }, 1000);
+
+              });
+            });
+          });
+
+
+        });
+    </script>
+</body>
+
+</html>

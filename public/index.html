@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>Home</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootswatch.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+</head>
+
+<body class="pd-0">
+    <div id="wrap">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                    <img src="images/cryto.png" class="img-responsive navbar-brand"  style="width: 200px;height: 90px;"/>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="active" href="#">Zeshan Sayed</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="/qrcode">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" id="contact">
+            <div class="jumbotron clearfix">
+                <h4 style="color:#C00">WHO Health Expenditure 1996 - 2014</h4>
+                <div class="col-xs-12 who-div pd-0" style="">
+                  <iframe src="https://data.worldbank.org/share/widget?end=2006&indicators=SH.XPD.OOPC.TO.ZS&start=2006&view=map&year=2014" width='100%' height='500' frameBorder='0' scrolling="no" ></iframe>
+                </div>
+                <div class="col-xs-12 pd-0">
+                  <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Amet dictum sit amet justo donec enim diam. Viverra tellus in hac habitasse platea dictumst vestibulum. Massa tincidunt dui ut ornare lectus sit. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Eu sem integer vitae justo eget magna fermentum iaculis. Feugiat vivamus at augue eget arcu dictum varius duis at. Nisl vel pretium lectus quam id leo in vitae. Est pellentesque elit ullamcorper dignissim cras. Habitant morbi tristique senectus et netus et malesuada. Sit amet nisl purus in mollis nunc sed id semper. Est placerat in egestas erat imperdiet sed euismod. Aliquet nec ullamcorper sit amet risus nullam eget. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Nibh nisl condimentum id venenatis a condimentum vitae. Sed turpis tincidunt id aliquet. Aliquam etiam erat velit scelerisque in dictum non consectetur a. Vulputate eu scelerisque felis imperdiet proin fermentum leo.</p>
+                </div>
+
+
+                <div class="col-xs-12 pd-0">
+                  <!-- <p class="justify">ICR (Intellectual Credit Repository) In the current scenariomany different Credit Reporting Agencies keep a track of the credit score of the individuals from all over the country. There are three major organizations they are TransUnion, Equifax and Experian. All do the same thing of maintaining the FICO scores along with the credit history of the individuals but they all follow different algorithms for measurement of the scores. Because of this difference many Individuals have different FICO scores in different organizationswhich they might not be aware of. So now whenever they apply for a new loan, it takes a lot of time for the verification and background check of the customer because most of the time the data gathered from any one of the Credit Reporting Agencies does not match with the data from the other Agencies which leads the involved banks for further investigation, hence increasing the time taken in the whole procedure.</p> -->
+                  <a class="btn btn-primary btn-lg visualize-data pull-right">Visualize Data</a>
+              </div>
+            </div>
+            <div class="col-xs-12 visualize-div" style="display:none;">
+              <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+
+
+        </div>
+        <!-- Modal Start-->
+
+        <!-- Modal Ends-->
+
+
+    </div>
+
+    <!--  Footer Starts -->
+    <div id="footer">
+        <div class="container text-center">
+            <p class="text-muted credit mrT-20"><span class="glyphicon glyphicon-copyright-mark"></span> Copyright, 2018 - CryptoMedata <a target="_blank" href="">(www.CryptoMedata.com)</a></p>
+        </div>
+    </div>
+    <!-- Footer Ends -->
+
+    <script type="text/javascript" src="js/jquerysession.js"></script>
+    <script type="text/javascript" src="javascripts/WHO_Country.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+          $(".visualize-data").on('click', function () {
+              $(".visualize-div").slideDown('slow', function () {
+                setTimeout( function () {
+                      $('html, body').animate({
+                          scrollTop: $(".visualize-div").offset().top
+                      }, 1000);
+
+                });
+              })
+          });
+
+          console.log(data);
+          var labels =[];
+          var getData = [];
+          var parsedData = data;
+          var backgroundColor=[];
+          var borderColor=[];
+          for (var i=0; i<parsedData.length;i++) {
+            labels.push(parsedData[i].Country_Name);
+            getData.push(parsedData[i].value2014);
+          }
+          function random_rgba() {
+              var o = Math.round, r = Math.random, s = 255;
+              return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ',0.5)';
+          }
+
+          for (var i=0; i<parsedData.length;i++) {
+            backgroundColor.push(random_rgba());
+            //borderColor.push(random_rgba());
+          }
+          //var test12=CSV2JSON("csv/API_SH.XPD.OOPC.TO.ZS_DS2_en_csv_v2.csv");
+          console.log(backgroundColor);
+          console.log(borderColor);
+          var ctx = document.getElementById("myChart").getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: labels,
+                  datasets: [{
+                      label: 'WHO 2014',
+                      data: getData,
+                      //backgroundColor: backgroundColor,
+                      //borderColor: borderColor,
+                      //borderWidth: 1
+                  }]
+              },
+              options: {
+                  scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Country Name'
+                        }
+                    }],
+                      yAxes: [{
+                          ticks: {
+                              beginAtZero:true
+                          },
+                          display: true,
+                          scaleLabel: {
+                              display: true,
+                              labelString: '% on Total Health Expenditure'
+                          }
+                      }]
+                  }
+              }
+          });
+          //Connect to Server Locally
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
