@@ -341,8 +341,8 @@ app.post('/recommendedDoctorDetails', function(req, res) {
 });
 
 //Twilio call to inform PAtient
-var accountSid = 'AC368353af798f45611ca034875071390c';
-var authToken = 'd5986470f972dc85428997786377696f';
+//var accountSid = 'AC368353af798f45611ca034875071390c';
+//var authToken = 'd5986470f972dc85428997786377696f';
 
 //require the Twilio module and create a REST client
 var twilio = require('twilio');
